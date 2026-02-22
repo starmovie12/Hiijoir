@@ -1,10 +1,8 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   compress: true,
   eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: false },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 3600,
@@ -14,7 +12,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'ui-avatars.com', pathname: '/**' },
     ],
   },
-  output: 'standalone',
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
